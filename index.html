@@ -3,82 +3,94 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quality Partner – Mateusz Klepacz</title>
+  <title>Gospodarstwo Tradycje Natury – Tomasz i Zofia</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #1d3557; }
-    header { background-color: #1d3557; color: white; padding: 2rem 1rem; text-align: center; }
-    header img { max-width: 80px; display: block; margin: 0 auto 1rem; }
-    header h1 { margin: 0; font-size: 2.5rem; }
-    header p { font-size: 1.2rem; margin-top: 0.5rem; }
-    section { padding: 2rem 1rem; max-width: 900px; margin: auto; background-color: white; margin-bottom: 1rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
-    h2 { color: #457b9d; }
-    ul { padding-left: 1.2rem; }
-    footer { background-color: #1d3557; color: white; text-align: center; padding: 1rem; font-size: 0.9rem; }
-    .contact a { color: #1d3557; text-decoration: none; display: block; margin-bottom: 0.3rem; }
-    .highlight { color: #e63946; font-weight: bold; }
-    form { display: flex; flex-direction: column; gap: 10px; margin-top: 1rem; }
-    input, textarea { padding: 10px; font-size: 1rem; border: 1px solid #ccc; border-radius: 5px; }
-    button { background-color: #1d3557; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; }
-    button:hover { background-color: #457b9d; }
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f4f0e8; color:#3b2716; }
+    header { background:#4a3826; color:#fcebd3; text-align:center; padding:2rem 1rem; }
+    nav { background:#3b2716; display:flex; justify-content:center; gap:1rem; padding:0.5rem; }
+    nav a { color:#fcebd3; text-decoration:none; padding:0.5rem 1rem; border-radius:4px; }
+    nav a:hover { background:#6b4f38; }
+    section { max-width:900px; margin:1rem auto; background:white; padding:1.5rem; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.1); }
+    h2 { color:#4a3826; }
+    footer { background:#4a3826; color:#fcebd3; text-align:center; padding:1rem; }
+    .gallery { display:flex; flex-wrap:wrap; gap:1rem; }
+    .gallery img { width:100%; max-width:280px; border-radius:8px; }
+    .lang-switch { margin-top:1rem; text-align:right; }
+    button { background:#3b2716; color:#fcebd3; border:none; padding:0.5rem 1rem; border-radius:4px; cursor:pointer; }
+    button:hover { background:#6b4f38; }
+    .hidden { display:none; }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Quality Partner Logo">
-    <h1>Quality Partner</h1>
-    <p>Mateusz Klepacz – Wdrożenia, audyty, dokumentacja ISO 9001 / 14001 / 45001</p>
+    <img src="logo.png" alt="Logo" style="max-width:100px;">
+    <h1>Gospodarstwo "Tradycje Natury"</h1>
+    <p>Tomasz i Zofia – rolnicy, kucharze i rodzice piątki dzieci</p>
   </header>
-
-  <section>
-    <h2>Kim jestem</h2>
-    <p>Nazywam się Mateusz Klepacz. Od lat pomagam firmom wdrażać, porządkować i usprawniać systemy zarządzania jakością, środowiskiem i bezpieczeństwem. Łączę doświadczenie auditora z nowoczesnym podejściem do organizacji pracy i automatyzacji przez AI.</p>
+  <nav>
+    <a href="#o-nas">O nas</a>
+    <a href="#produkty">Produkty</a>
+    <a href="#przepisy">Przepisy</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+  <div class="lang-switch">
+    <button onclick="switchLang('pl')">PL</button>
+    <button onclick="switchLang('en')">EN</button>
+  </div>
+  <section id="o-nas">
+    <h2 class="pl">Nasza wieś</h2>
+    <h2 class="en hidden">Our Village</h2>
+    <p class="pl">Zapraszamy do zadbanej, staropolskiej wsi, w której uprawiamy zboża i warzywa z poszanowaniem tradycji. W gospodarstwie łączymy stare metody z nowoczesnymi maszynami.</p>
+    <p class="en hidden">Welcome to our well-kept traditional Polish village. We grow grains and vegetables with respect for nature, combining old methods with modern machinery.</p>
+    <div class="gallery">
+      <img src="https://placehold.co/280x180?text=Szkic+starej+maszyny" alt="Szkic starej maszyny">
+      <img src="https://placehold.co/280x180?text=Szkic+nowoczesnej+maszyny" alt="Szkic nowoczesnej maszyny">
+    </div>
   </section>
-
-  <section>
-    <h2>Oferta usług</h2>
-    <ul>
-      <li><strong>Wdrożenia ISO 9001, 14001, 45001</strong> – kompleksowo od analizy po audyt</li>
-      <li><strong>Audyty wewnętrzne</strong> – przygotowanie do certyfikacji i recertyfikacji</li>
-      <li><strong>Dokumentacja</strong> – procedury, instrukcje, formularze w nowoczesnej formie</li>
-      <li><strong>Doradztwo</strong> – abonamenty miesięczne, konsultacje indywidualne</li>
-      <li><strong>Automatyzacja i AI</strong> – agenci wspierający procesy jakościowe</li>
+  <section id="produkty">
+    <h2 class="pl">Nasze produkty</h2>
+    <h2 class="en hidden">Our Products</h2>
+    <p class="pl">Oferujemy świeże warzywa i owoce prezentowane na drewnianych deskach z delikatnymi dodatkami ziaren.</p>
+    <p class="en hidden">We offer fresh vegetables and fruits presented on wooden boards with gentle grains and seeds.</p>
+    <div class="gallery">
+      <img src="https://placehold.co/280x180?text=Warzywa" alt="Warzywa">
+      <img src="https://placehold.co/280x180?text=Owoce" alt="Owoce">
+    </div>
+  </section>
+  <section id="przepisy">
+    <h2 class="pl">Staropolskie przepisy</h2>
+    <h2 class="en hidden">Traditional Recipes</h2>
+    <ul class="pl">
+      <li>Żurek z domowego zakwasu – zestaw składników 25 zł</li>
+      <li>Bigos z własnej kapusty – zestaw składników 40 zł</li>
+      <li>Placki ziemniaczane – ziemniaki z naszego pola 15 zł</li>
+    </ul>
+    <ul class="en hidden">
+      <li>Sour rye soup starter kit – 25 PLN</li>
+      <li>Hunter's stew kit – 40 PLN</li>
+      <li>Potato pancake kit – 15 PLN</li>
     </ul>
   </section>
-
+  <section id="kontakt" class="contact">
+    <h2 class="pl">Kontakt</h2>
+    <h2 class="en hidden">Contact</h2>
+    <p class="pl">Telefon: <a href="tel:+48123456789">+48 123 456 789</a><br>Email: <a href="mailto:kontakt@tradycjenatury.pl">kontakt@tradycjenatury.pl</a></p>
+    <p class="en hidden">Phone: <a href="tel:+48123456789">+48 123 456 789</a><br>Email: <a href="mailto:kontakt@tradycjenatury.pl">kontakt@tradycjenatury.pl</a></p>
+  </section>
   <section>
-    <h2>AI i automatyzacja</h2>
-    <p>Specjalizuję się w projektowaniu i wdrażaniu agentów AI, którzy potrafią:</p>
-    <ul>
-      <li>Wspomagać tworzenie dokumentacji ISO</li>
-      <li>Delegować zadania i monitorować ich realizację</li>
-      <li>Uczyć się procesów w organizacji i wspierać operacje</li>
-      <li>Tworzyć automatyczne checklisty i formularze</li>
-      <li>Być pomocnikami dla działów jakości i HR</li>
-    </ul>
-    <p>Oferuję również indywidualne <strong>szkolenia z obsługi agentów AI</strong> oraz możliwość <strong>zamówienia własnego agenta</strong> dla firmy.</p>
+    <h2 class="pl">EKOgucik – Twój wirtualny pomocnik</h2>
+    <h2 class="en hidden">EKOgucik – Your virtual helper</h2>
+    <p class="pl">Czatbot kogut odpowie na pytania o ofertę i przepisy, korzystając z technologii OpenAI.</p>
+    <p class="en hidden">Our rooster chatbot answers questions about our products and recipes using OpenAI technology.</p>
   </section>
-
-  <section>
-    <h2>Dlaczego warto</h2>
-    <p>Stawiam na przejrzystość, prostotę, oszczędność czasu i realną wartość dla klienta. Pracuję bez zbędnej biurokracji, z myślą o ludziach i efektywności.</p>
-  </section>
-
-  <section class="contact">
-    <h2>Kontakt</h2>
-    <p>Skontaktuj się, aby porozmawiać o potrzebach Twojej firmy:</p>
-    <a href="mailto:kontakt@qualitypartner.pl">📧 kontakt@qualitypartner.pl</a>
-    <a href="tel:+48691181850">📞 +48 691 181 850</a>
-
-    <form action="mailto:kontakt@qualitypartner.pl" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Twoje imię i nazwisko" required>
-      <input type="email" name="email" placeholder="Twój e-mail" required>
-      <textarea name="message" rows="5" placeholder="Twoja wiadomość" required></textarea>
-      <button type="submit">Wyślij wiadomość</button>
-    </form>
-  </section>
-
   <footer>
-    &copy; 2025 Quality Partner – Mateusz Klepacz
+    &copy; 2025 Gospodarstwo "Tradycje Natury" – Tomasz i Zofia
   </footer>
+  <script>
+    function switchLang(lang){
+      document.querySelectorAll('.pl').forEach(el=>el.style.display=lang==='pl'?'':'none');
+      document.querySelectorAll('.en').forEach(el=>el.style.display=lang==='en'?'':'none');
+    }
+  </script>
 </body>
 </html>
